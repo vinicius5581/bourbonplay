@@ -13,14 +13,53 @@ section{
 
 
 //Layout
-@mixin twin-columns{
-	>div{
-		@include span-columns(6);
+@mixin twin-columns($columns){
+	@if $columns == 3{
+		>div{
+			background:red;
+			@include span-columns(4);
+			&:last-child{
+				@include omega;
+			}
+		}
 	}
+	@if $columns == 4{
+		>div{
+			@include span-columns(3);
+			&:last-child{
+				@include omega;
+			}
+		}
+	}
+	@if $columns == 6{
+		>div{
+			@include span-columns(2);
+			&:last-child{
+				@include omega;
+			}
+		}
+	}
+	@else{
+		>div{
+			@include span-columns(6);
+			&:last-child{
+				@include omega;
+			}
+		}
+	}		
 }
 
-.twin-columns{
-	@include twin-columns;
+.twin-columns-2{
+	@include twin-columns(2);
+}
+.twin-columns-3{
+	@include twin-columns(3);
+}
+.twin-columns-4{
+	@include twin-columns(4);
+}
+.twin-columns-6{
+	@include twin-columns(6);
 }
 
 .full-container {
