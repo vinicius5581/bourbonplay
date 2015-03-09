@@ -1,0 +1,70 @@
+@import "../vendors/bourbon/bourbon";
+@import "../vendors/base/base";
+@import "../vendors/neat/neat";
+
+
+*{
+
+}
+section{
+	@include outer-container;
+	@include padding(1em 0);
+}
+
+
+//Layout
+@mixin twin-columns{
+	>div{
+		@include span-columns(6);
+	}
+}
+
+.twin-columns{
+	@include twin-columns;
+}
+
+.full-container {
+	background:red;
+    @include outer-container(100%);
+}
+
+@mixin hidding-details{
+
+	>article{
+		@include padding(2em 0);
+		>header{
+			h1{
+				@include span-columns(3);
+			}
+			p{
+				@include span-columns(9);
+				@include omega;
+			}
+		}
+		>div{
+			@include span-columns(9);
+			@include shift(3);
+			@include omega;
+			ul{
+				@include span-columns(6);
+				&:last-child{
+					@include omega;
+				}
+			}
+		}
+	}
+}
+
+
+
+.hidding-details{
+	@include hidding-details;
+}
+
+//Producst List
+
+//Product Presentation List
+
+
+// @mixin fill-parent() { ... } //Forces the element to fill its parent container.
+
