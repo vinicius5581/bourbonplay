@@ -1,109 +1,13 @@
-@import "../vendors/bourbon/bourbon";
-@import "../vendors/base/base";
-@import "../vendors/neat/neat";
+//Core CSS 
+@import "../core/vendors/vendors";
+@import "../core/css/mixins";
 
 
-*{
-
-}
-section{
-	@include outer-container;
-	@include padding(1em 0);
-}
+//Variables
+@import "../core/css/variables";
+@import "../themes/theme_a/css/variables";
 
 
-//Layout
-@mixin twin-columns($columns){
-	@if $columns == 3{
-		>div{
-			background:red;
-			@include span-columns(4);
-			&:last-child{
-				@include omega;
-			}
-		}
-	}
-	@if $columns == 4{
-		>div{
-			@include span-columns(3);
-			&:last-child{
-				@include omega;
-			}
-		}
-	}
-	@if $columns == 6{
-		>div{
-			@include span-columns(2);
-			&:last-child{
-				@include omega;
-			}
-		}
-	}
-	@else{
-		>div{
-			@include span-columns(6);
-			&:last-child{
-				@include omega;
-			}
-		}
-	}		
-}
-
-.twin-columns-2{
-	@include twin-columns(2);
-}
-.twin-columns-3{
-	@include twin-columns(3);
-}
-.twin-columns-4{
-	@include twin-columns(4);
-}
-.twin-columns-6{
-	@include twin-columns(6);
-}
-
-.full-container {
-	background:red;
-    @include outer-container(100%);
-}
-
-@mixin hidding-details{
-
-	>article{
-		@include padding(2em 0);
-		>header{
-			h1{
-				@include span-columns(3);
-			}
-			p{
-				@include span-columns(9);
-				@include omega;
-			}
-		}
-		>div{
-			@include span-columns(9);
-			@include shift(3);
-			@include omega;
-			ul{
-				@include span-columns(6);
-				&:last-child{
-					@include omega;
-				}
-			}
-		}
-	}
-}
-
-
-
-.hidding-details{
-	@include hidding-details;
-}
-
-//Producst List
-
-//Product Presentation List
-
-
-// @mixin fill-parent() { ... } //Forces the element to fill its parent container.
-
+//Specifics
+@import "../core/css/core";
+@import "../themes/theme_a/css/theme";

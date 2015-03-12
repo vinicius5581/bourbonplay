@@ -185,119 +185,47 @@ picture {
   margin: 0;
   max-width: 100%; }
 
-section {
+.hello_world {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  padding: 1em 0; }
-  section::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.twin-columns-2 > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .twin-columns-2 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-2 > div:last-child {
-    margin-right: 0; }
-
-.twin-columns-3 > div {
-  background: red;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .twin-columns-3 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-3 > div:last-child {
-    margin-right: 0; }
-.twin-columns-3 > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .twin-columns-3 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-3 > div:last-child {
-    margin-right: 0; }
-
-.twin-columns-4 > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .twin-columns-4 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-4 > div:last-child {
-    margin-right: 0; }
-.twin-columns-4 > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .twin-columns-4 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-4 > div:last-child {
-    margin-right: 0; }
-
-.twin-columns-6 > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .twin-columns-6 > div:last-child {
-    margin-right: 0; }
-  .twin-columns-6 > div:last-child {
-    margin-right: 0; }
-
-.full-container {
-  background: red;
-  max-width: 100%;
-  margin-left: auto;
   margin-right: auto; }
-  .full-container::after {
+  .hello_world::after {
     clear: both;
     content: "";
     display: table; }
+  .hello_world header {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    color: red; }
+    .hello_world header:last-child {
+      margin-right: 0; }
+  .hello_world section {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .hello_world section:last-child {
+      margin-right: 0; }
+  .hello_world aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-right: 0; }
+    .hello_world aside:last-child {
+      margin-right: 0; }
+  .hello_world footer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    color: red; }
+    .hello_world footer:last-child {
+      margin-right: 0; }
 
-.hidding-details > article {
-  padding: 2em 0; }
-  .hidding-details > article > header h1 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .hidding-details > article > header h1:last-child {
-      margin-right: 0; }
-  .hidding-details > article > header p {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-    margin-right: 0; }
-    .hidding-details > article > header p:last-child {
-      margin-right: 0; }
-  .hidding-details > article > div {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-    margin-left: 25.58941%;
-    margin-right: 0; }
-    .hidding-details > article > div:last-child {
-      margin-right: 0; }
-    .hidding-details > article > div ul {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .hidding-details > article > div ul:last-child {
-        margin-right: 0; }
-      .hidding-details > article > div ul:last-child {
-        margin-right: 0; }
+h3 {
+  color: red; }
 
 /*# sourceMappingURL=app.css.map */
