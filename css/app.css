@@ -185,6 +185,19 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+.grid {
+  width: 60em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  background: purple;
+  color: green; }
+  .grid div > div {
+    padding: 0 0.5em;
+    width: 5em;
+    display: inline-block;
+    box-sizing: border-box;
+    background: blue; }
+
 .hello_world {
   max-width: 68em;
   margin-left: auto;

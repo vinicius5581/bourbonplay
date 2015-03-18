@@ -1,0 +1,39 @@
+$grid-unit:em;
+$columns-conf:12;
+$grid-gutter-conf:0.5;
+$wrapper-width-conf:60;
+
+$wrapper-width:$wrapper-width-conf + $grid-unit;
+$grid-gutter:$grid-gutter-conf + $grid-unit;
+
+
+$column-width : $wrapper-width-conf / $columns-conf + $grid-unit;
+
+@mixin grid-wrapper{
+	width:$wrapper-width;
+	margin:0 auto;
+	padding:0 $grid-gutter;
+	background:purple;
+}
+
+@mixin grid-span($columns){
+	padding:0 $grid-gutter;
+	width:$column-width;
+	display:inline-block;
+	box-sizing:border-box;
+	background:blue;
+}
+
+@mixin grid-last{
+
+}
+
+
+
+.grid{
+	@include grid-wrapper;
+	div>div{
+		@include grid-span(1);
+	}
+	color:green;
+}

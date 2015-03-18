@@ -1,0 +1,13 @@
+//breakpoints
+
+
+@mixin media($media){
+
+	@if $media == Mobile{
+
+	}@else if $media == Tablet{
+
+	}@else{
+	 color:red;
+	}
+}
