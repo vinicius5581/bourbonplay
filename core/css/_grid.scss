@@ -1,39 +1,127 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
 $grid-unit:em;
-$columns-conf:12;
-$grid-gutter-conf:0.5;
-$wrapper-width-conf:60;
+$columns:12;
+$grid-gutter:0.5em;
+$wrapper-width:60em;
 
-$wrapper-width:$wrapper-width-conf + $grid-unit;
-$grid-gutter:$grid-gutter-conf + $grid-unit;
-
-
-$column-width : $wrapper-width-conf / $columns-conf + $grid-unit;
+$column-width : $wrapper-width / $columns;
 
 @mixin grid-wrapper{
 	width:$wrapper-width;
 	margin:0 auto;
 	padding:0 $grid-gutter;
-	background:purple;
+	background:grey;
+	&:after{
+		content:"";
+		display: table;
+		clear:both;
+	}
+}
+
+@mixin grid-wrapper-inherit{
+	width:100%;
+	margin:0 auto;
+	&:after{
+		content:"";
+		display: table;
+		clear:both;
+	}
 }
 
 @mixin grid-span($columns){
 	padding:0 $grid-gutter;
-	width:$column-width;
-	display:inline-block;
+	width:$columns * $column-width;
+	float:left;
 	box-sizing:border-box;
-	background:blue;
+	background:rgba(122,54,97,0.8);
 }
 
 @mixin grid-last{
 
 }
 
-
-
-.grid{
+.grid-1{
 	@include grid-wrapper;
-	div>div{
+	>div:nth-child(1){
 		@include grid-span(1);
+		background:red;
 	}
-	color:green;
+	>div:nth-child(2){
+		@include grid-span(5);
+		background:blue;
+	}
+	>div:nth-child(3){
+		@include grid-span(6);
+		background:brown;
+	}
+}
+
+.grid-2{
+	@include grid-wrapper;
+	>div:nth-child(1){
+		@include grid-span(3);
+		background:red;
+	}
+	>div:nth-child(2){
+		@include grid-span(4);
+		background:blue;
+	}
+	>div:nth-child(3){
+		@include grid-span(5);
+		background:brown;
+	}
+}
+
+.grid-3{
+	@include grid-wrapper;
+	>div:nth-child(1){
+		@include grid-span(4);
+		background:red;
+	}
+	>div:nth-child(2){
+		@include grid-span(1);
+		background:blue;
+	}
+	>div:nth-child(3){
+		@include grid-span(2);
+		background:brown;
+	}
+	>div:nth-child(4){
+		@include grid-span(3);
+		background:yellow;
+	}
+	>div:nth-child(5){
+		@include grid-span(2);
+		background:pink;
+	}
+}
+
+
+.grid-4{
+	@include grid-wrapper;
+	>div:nth-child(1){
+		@include grid-span(6);
+		background:red;
+	}
+	>div:nth-child(2){
+		@include grid-wrapper-inherit;
+		background:blue;
+		>div:nth-child(1){
+			@include grid-span(2);
+			background:brown;
+		}
+		>div:nth-child(2){
+			@include grid-span(2);
+			background:yellow;
+		}
+		>div:nth-child(3){
+			@include grid-span(2);
+			background:pink;
+		}
+	}
 }
